@@ -1,7 +1,3 @@
-/**
- * CMS_1101: Multi-Media System - Comprehensive Practice Quiz Data (130 Questions)
- * Topics 1-5 (Topic 3 expanded to 50 questions for Modules 3.0-3.5) with balanced randomized option distributions
- */
 const CMS_QUIZ_DATA = [
   {
     "id": 1,

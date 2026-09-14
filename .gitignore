@@ -1,14 +1,7 @@
-﻿# Working scripts & scratch files
-scratch/
-
-# Large lecture slide decks & source files
+﻿scratch/
 CMS_1101 Multi-Media System/
-
-# Python caches
 __pycache__/
 *.py[cod]
-
-# OS & Editor files
 .DS_Store
 Thumbs.db
 .vscode/

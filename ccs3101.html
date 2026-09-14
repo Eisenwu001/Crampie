@@ -9,28 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* Minimalist Warm Beige / Off-White Canvas */
+
       --bg-page: #f7f5f0;
       --bg-card: #ffffff;
       --bg-subtle: #efece4;
       --bg-active: #e6e2d8;
 
-      /* Thin Crisp Borders */
       --border-color: #e2ded6;
       --border-dark: #2b2b2b;
       --border-hover: #b8b3a7;
 
-      /* Charcoal / Editorial Typography */
       --text-primary: #1f2328;
       --text-secondary: #575e66;
       --text-muted: #8c887f;
 
-      /* Neutral Graphite Accent */
       --accent: #2b2b2b;
       --accent-hover: #14171a;
       --accent-light: #efece4;
 
-      /* Muted Feedback States */
       --correct-bg: #f2f1ec;
       --correct-border: #2b2b2b;
       --correct-text: #1f2328;
@@ -39,7 +35,6 @@
       --incorrect-border: #9e4738;
       --incorrect-text: #8c362a;
 
-      /* Strict Flat 2px Border Radius Everywhere */
       --radius: 2px;
 
       --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -68,7 +63,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ===== Main Content Container ===== */
     .container {
       width: 100%;
       max-width: 860px;
@@ -76,8 +70,6 @@
       padding: 36px 20px 60px 20px;
     }
 
-    
-    /* Top Home Link */
     .header-nav {
       width: 100%;
       display: flex;
@@ -130,7 +122,6 @@
       display: none;
     }
 
-    /* ===== Centered Header ===== */
     header {
       text-align: center;
       margin-bottom: 22px;
@@ -154,7 +145,6 @@
       margin-bottom: 16px;
     }
 
-    /* ===== Topic Dropdown (Flat 2px) ===== */
     .topic-select-wrapper {
       position: relative;
       width: 100%;
@@ -202,7 +192,6 @@
       border-color: var(--border-dark);
     }
 
-    /* ===== Flat Stats Card (Bolder 8px Progress Bar) ===== */
     .stats-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -243,7 +232,6 @@
       line-height: 1.2;
     }
 
-    /* Bolder 8px Progress Bar with Crisp Track */
     .progress-bar-container {
       flex: 1;
       min-width: 100px;
@@ -262,7 +250,6 @@
       transition: width 0.25s ease;
     }
 
-    /* Flat Navigator Toggle Button */
     .btn-navigator {
       display: inline-flex;
       align-items: center;
@@ -296,7 +283,6 @@
       color: #ffffff;
     }
 
-    /* ===== Matrix Drawer (Flat 2px) ===== */
     .matrix-section {
       display: none;
       background: var(--bg-card);
@@ -411,7 +397,6 @@
       color: var(--incorrect-text);
     }
 
-    /* ===== Main Question Card with Attached Footer ===== */
     .question-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -456,7 +441,6 @@
       color: var(--text-muted);
     }
 
-    /* Generous Typography Scale */
     .question-text {
       font-size: 20px;
       font-weight: 700;
@@ -466,7 +450,6 @@
       margin-bottom: 24px;
     }
 
-    /* ===== Taller, Comfortable Answer Options ===== */
     .options-list {
       display: flex;
       flex-direction: column;
@@ -496,7 +479,6 @@
       border-color: var(--border-hover);
     }
 
-    /* Dark fill for badges on hover/select */
     .option-btn:hover:not(.locked) .option-letter {
       display: inline-flex;
       align-items: center;
@@ -513,7 +495,6 @@
       transition: all 0.12s ease;
     }
 
-    /* Prominent 28px Letter Badges */
     .option-letter {
       display: inline-flex;
       align-items: center;
@@ -536,7 +517,6 @@
       line-height: 1.5;
     }
 
-    /* Option Feedback States */
     .option-btn.selected-correct {
       background: var(--correct-bg);
       border-color: var(--correct-border);
@@ -614,7 +594,6 @@
       cursor: default;
     }
 
-    /* ===== Explanation Panel ===== */
     .explanation-panel {
       display: none;
       border-radius: var(--radius);
@@ -664,7 +643,6 @@
       font-weight: 500;
     }
 
-    /* ===== Integrated Card Footer Navigation ===== */
     .card-footer-nav {
       display: flex;
       justify-content: space-between;
@@ -717,7 +695,6 @@
       color: var(--text-muted);
     }
 
-    /* Primary Accent Button (Next) */
     .btn-nav-primary {
       background: var(--accent);
       color: #ffffff;
@@ -746,7 +723,6 @@
       color: var(--text-muted);
     }
 
-    /* ===== Responsive Adaptations ===== */
     @media (max-width: 768px) {
       .container {
         padding: 24px 16px 50px 16px;
@@ -786,7 +762,6 @@
         margin-bottom: 14px;
       }
 
-      /* Stats Card Mobile Grid: 3 Equal Stats + Navigator, Progress Bar underneath */
       .stats-card {
         display: grid;
         grid-template-columns: repeat(3, 1fr) auto;
@@ -834,7 +809,6 @@
         justify-self: end;
       }
 
-      /* Question Card Top: Keep on single line, spaced between */
       .card-top {
         display: flex;
         flex-direction: row;
@@ -895,7 +869,6 @@
         font-size: 13px;
       }
 
-      /* Card Footer Nav: 3 Equal-Width Distributed Action Buttons */
       .card-footer-nav {
         display: flex;
         align-items: center;
@@ -934,7 +907,6 @@
         display: inline;
       }
 
-      /* Question Matrix Drawer Mobile */
       .matrix-section {
         padding: 12px 14px;
         margin-bottom: 14px;
@@ -970,7 +942,7 @@
 <body>
 
   <div class="container">
-    <!-- Navigation Back to Home Hub -->
+
     <div class="header-nav">
       <a href="index.html" class="home-link" title="Return to Tara, Cram!">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -984,7 +956,6 @@
       <h1 class="app-title">CCS_3101: Algorithm and Complexity</h1>
       <p class="app-subtitle">Exam Practice Test — 90 Multiple-Choice Questions</p>
 
-      <!-- Topic Dropdown (Flat 2px) -->
       <div class="topic-select-wrapper">
         <span class="topic-select-icon">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1000,7 +971,6 @@
       </div>
     </header>
 
-    <!-- Stats Bar (Flat 2px, 8px Progress Bar) -->
     <div class="stats-card">
       <div class="stat-item">
         <div class="stat-header">
@@ -1051,7 +1021,6 @@
       </button>
     </div>
 
-    <!-- Matrix Drawer (Flat 2px) -->
     <div class="matrix-section" id="matrixSection">
       <div class="matrix-header">
         <div class="matrix-title-group">
@@ -1072,7 +1041,6 @@
       <div class="matrix-grid" id="matrixGrid"></div>
     </div>
 
-    <!-- Main Question Card with Integrated Footer -->
     <div class="question-card" id="questionCard">
       <div class="card-body">
         <div class="card-top">
@@ -1089,7 +1057,7 @@
         <div class="question-text" id="cardQuestionText">Loading question...</div>
 
         <div class="options-list" id="cardOptionsList">
-          <!-- Dynamically generated -->
+
         </div>
 
         <div class="explanation-panel" id="cardExplanation">
@@ -1098,7 +1066,6 @@
         </div>
       </div>
 
-      <!-- Integrated Card Footer Navigation (Seamless Panel) -->
       <footer class="card-footer-nav" aria-label="Question Navigation">
         <button class="btn-nav-action" id="btnPrev" title="Previous Question">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1127,10 +1094,8 @@
     </div>
   </div>
 
-  <!-- Load CCS 3101 Quiz Data -->
   <script src="ccs3101_quiz_data.js"></script>
   <script>
-    // Fallback if ccs3101_quiz_data.js is not loaded
     if (typeof CCS_QUIZ_DATA === "undefined") {
       window.CCS_QUIZ_DATA = [{
         id: 1,
@@ -1148,14 +1113,12 @@
       }];
     }
 
-    // Official Topic Title Mapping for CCS_3101
     const TOPIC_NAMES = {
       1: "Algorithm Basics",
       2: "Algorithm Analysis",
       3: "Mathematical Background"
     };
 
-    // State
     const state = {
       allData: CCS_QUIZ_DATA,
       filteredData: [],
@@ -1164,7 +1127,6 @@
       currentTopic: 0
     };
 
-    // DOM Elements
     const elements = {
       topicSelect: document.getElementById("topicSelect"),
       progressStat: document.getElementById("progressStat"),
@@ -1188,7 +1150,6 @@
       btnNextUnanswered: document.getElementById("btnNextUnanswered")
     };
 
-    // Set Topic Filter
     function setTopic(topicValue) {
       state.currentTopic = parseInt(topicValue);
       if (state.currentTopic === 0) {
@@ -1201,7 +1162,6 @@
       renderQuestion();
     }
 
-    // Render Question
     function renderQuestion() {
       const q = state.filteredData[state.currentFilteredIndex];
       if (!q) return;
@@ -1209,15 +1169,12 @@
       const letters = ["A", "B", "C", "D"];
       const answerState = state.userAnswers[q.id];
 
-      // Topic badge with standardized topic name
       const topicName = TOPIC_NAMES[q.topicId] || `Topic ${q.topicId}`;
       elements.cardTopicText.textContent = topicName;
       elements.cardCounter.textContent = `Question ${state.currentFilteredIndex + 1} of ${state.filteredData.length}`;
 
-      // Question text
       elements.cardQuestionText.textContent = q.question;
 
-      // Options
       elements.cardOptionsList.innerHTML = "";
       q.options.forEach((optText, idx) => {
         const btn = document.createElement("button");
@@ -1250,7 +1207,6 @@
         elements.cardOptionsList.appendChild(btn);
       });
 
-      // Explanation Panel
       if (answerState !== undefined) {
         elements.cardExplanation.classList.add("active");
         if (answerState.isCorrect) {
@@ -1281,17 +1237,14 @@
         elements.explanationText.textContent = "";
       }
 
-      // Prev / Next button states
       elements.btnPrev.disabled = state.currentFilteredIndex === 0;
       elements.btnNext.disabled = state.currentFilteredIndex === state.filteredData.length - 1;
 
       renderMatrix();
 
-      // Ensure smooth view focus on question card
       elements.questionCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
-    // Handle Option Selection
     function handleSelectOption(selectedIndex) {
       const q = state.filteredData[state.currentFilteredIndex];
       if (state.userAnswers[q.id] !== undefined) return;
@@ -1306,7 +1259,6 @@
       renderQuestion();
     }
 
-    // Update Statistics
     function updateStats() {
       const totalFiltered = state.filteredData.length;
       let answeredCount = 0;
@@ -1329,7 +1281,6 @@
       elements.accuracyStat.textContent = `${accuracy}%`;
     }
 
-    // Render Navigator Matrix
     function renderMatrix() {
       elements.matrixGrid.innerHTML = "";
       state.filteredData.forEach((q, idx) => {
@@ -1355,7 +1306,6 @@
       });
     }
 
-    // Event Listeners
     elements.btnPrev.addEventListener("click", () => {
       if (state.currentFilteredIndex > 0) {
         state.currentFilteredIndex--;
@@ -1397,7 +1347,6 @@
       setTopic(e.target.value);
     });
 
-    // Keyboard Shortcuts
     document.addEventListener("keydown", (e) => {
       if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.tagName === "SELECT") return;
 
@@ -1423,8 +1372,6 @@
       }
     });
 
-    
-    // Dynamic Session Option Shuffling
     function shuffleOptionsForSession(data) {
       return data.map(item => {
         const q = { ...item };
@@ -1443,7 +1390,6 @@
       });
     }
 
-    // Initial Load with session option shuffling
     state.allData = shuffleOptionsForSession(CCS_QUIZ_DATA);
     setTopic(0);
   </script>

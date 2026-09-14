@@ -1,7 +1,3 @@
-/**
- * CCS_3101: Algorithm and Complexity - Comprehensive Practice Quiz Data (90 Questions)
- * Topics 1-3 with balanced randomized option distributions
- */
 const CCS_QUIZ_DATA = [
   {
     "id": 1,

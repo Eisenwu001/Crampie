@@ -1,7 +1,3 @@
-/**
- * CDT_1101: Data Analysis - Comprehensive Practice Quiz Data (120 Questions)
- * Topics 1-4 with randomized option distributions
- */
 const QUIZ_DATA = [
   {
     "id": 1,
