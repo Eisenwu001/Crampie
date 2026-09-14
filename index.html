@@ -83,6 +83,37 @@
       line-height: 1.55;
     }
 
+    .hub-credit {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: -12px;
+      margin-bottom: 24px;
+    }
+
+    .hub-credit a,
+    .hub-footer a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+      transition: opacity 0.15s ease;
+    }
+
+    .hub-credit a:hover,
+    .hub-footer a:hover {
+      opacity: 0.75;
+    }
+
+    .hub-footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
     .subject-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -277,8 +308,8 @@
     <header>
       <h1 class="hub-title">Tara, Cram!</h1>
       <p class="hub-subtitle">Welcome to the cram session. If we fail this exam together, at least we fail with style. Lock in.</p>
-
-      </header>
+      <p class="hub-credit">Virus by <a href="https://linvisuals.com" target="_blank" rel="noopener noreferrer">Lin</a></p>
+    </header>
 
     <main class="subject-grid">
 
@@ -372,6 +403,9 @@
         </div>
       </article>
     </main>
+    <footer class="hub-footer">
+      <p>Virus by <a href="https://linvisuals.com" target="_blank" rel="noopener noreferrer">Lin</a></p>
+    </footer>
   </div>
 
 </body>

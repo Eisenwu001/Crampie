@@ -937,6 +937,26 @@
         font-size: 11px;
       }
     }
+
+    .app-credit-footer {
+      text-align: center;
+      margin-top: 36px;
+      padding: 20px 0 10px 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .app-credit-footer a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+      transition: opacity 0.15s ease;
+    }
+
+    .app-credit-footer a:hover {
+      opacity: 0.75;
+    }
   </style>
 </head>
 <body>
@@ -1093,6 +1113,9 @@
         </button>
       </footer>
     </div>
+    <footer class="app-credit-footer">
+      <p>Virus by <a href="https://linvisuals.com" target="_blank" rel="noopener noreferrer">Lin</a></p>
+    </footer>
   </div>
 
   <script src="quiz_data.js"></script>
