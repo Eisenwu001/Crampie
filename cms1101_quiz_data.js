@@ -1823,4 +1823,4 @@ const CMS_QUIZ_DATA = [
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { CMS_QUIZ_DATA };
-}
+} 
