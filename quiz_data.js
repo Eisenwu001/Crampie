@@ -1,4 +1,4 @@
-const QUIZ_DATA = [
+const QUIZ_DATA = [ 
   {
     "id": 1,
     "topicId": 1,
