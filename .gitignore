@@ -1,0 +1,7 @@
+﻿scratch/
+CMS_1101 Multi-Media System/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.vscode/
