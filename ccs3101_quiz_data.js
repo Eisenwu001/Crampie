@@ -1,4 +1,4 @@
-const CCS_QUIZ_DATA = [
+const CCS_QUIZ_DATA = [ 
   {
     "id": 1,
     "topicId": 1,
