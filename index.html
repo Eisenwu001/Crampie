@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tara, Cram!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Minimalist Warm Beige / Off-White Canvas */
+      --bg-page: #f7f5f0;
+      --bg-card: #ffffff;
+      --bg-subtle: #efece4;
+      --bg-hover: #eae6dc;
+
+      /* Thin Crisp Borders */
+      --border-color: #e2ded6;
+      --border-dark: #2b2b2b;
+      --border-hover: #b8b3a7;
+
+      /* Charcoal / Editorial Typography */
+      --text-primary: #1f2328;
+      --text-secondary: #575e66;
+      --text-muted: #8c887f;
+
+      /* Neutral Graphite Accent */
+      --accent: #2b2b2b;
+      --accent-hover: #14171a;
+
+      /* Strict Flat 2px Border Radius Everywhere */
+      --radius: 2px;
+
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      font-family: var(--font-family);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== Main Hub Container ===== */
+    .hub-container {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 54px 24px 80px 24px;
+    }
+
+    /* ===== Header Section ===== */
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .hub-title {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .hub-subtitle {
+      font-size: 15.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 24px auto;
+      line-height: 1.55;
+    }
+
+    /* ===== Subject Cards Grid with Strict Baseline Alignment ===== */
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 22px;
+      margin-bottom: 0;
+      align-items: stretch;
+    }
+
+    .subject-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 26px 26px 26px;
+      height: 100%;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .subject-card:hover {
+      border-color: var(--border-dark);
+      transform: translateY(-2px);
+    }
+
+    .card-top-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-header {
+      margin-bottom: 14px;
+    }
+
+    .code-badge-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .course-code {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 3px 8px;
+      color: var(--text-primary);
+    }
+
+    .question-pill {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+
+    /* Strict Min-Heights for Pixel-Perfect Horizontal Alignment */
+    .course-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 10px;
+      min-height: 54px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .course-description {
+      font-size: 13.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 18px;
+      min-height: 84px;
+    }
+
+    /* Topic Tags Container with Normalized Height */
+    .topic-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 22px;
+      min-height: 108px;
+      align-content: flex-start;
+    }
+
+    .topic-chip {
+      font-size: 11.5px;
+      font-weight: 600;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 4px 8px;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+
+    /* Card Action Footer — Always Baseline-Aligned */
+    .card-actions {
+      border-top: 1px solid var(--border-color);
+      padding-top: 20px;
+      margin-top: auto;
+    }
+
+    .btn-start {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 12px 18px;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+      cursor: pointer;
+    }
+
+    .btn-start:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    .btn-start svg {
+      transition: transform 0.15s ease;
+    }
+
+    .btn-start:hover svg {
+      transform: translateX(3px);
+    }
+
+    
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hub-container {
+        padding: 36px 16px 60px 16px;
+      }
+
+      .hub-title {
+        font-size: 28px;
+      }
+
+      .subject-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* On mobile/single column, reset min-heights */
+      .course-title,
+      .course-description,
+      .topic-list {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hub-container {
+        padding: 24px 14px 48px 14px;
+      }
+
+      .hub-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .hub-subtitle {
+        font-size: 13.5px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .subject-card {
+        padding: 20px 16px;
+      }
+
+      .card-actions {
+        gap: 8px;
+      }
+
+      .btn-start {
+        padding: 11px 14px;
+        font-size: 13.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hub-container">
+    <!-- Header -->
+    <header>
+      <h1 class="hub-title">Tara, Cram!</h1>
+      <p class="hub-subtitle">Welcome to the cram session. If we fail this exam together, at least we fail with style. Lock in.</p>
+
+      </header>
+
+    <!-- Subject Cards Grid (Strict Baseline-Aligned) -->
+    <main class="subject-grid">
+      <!-- 1. CDT_1101 -->
+      <article class="subject-card">
+        <div class="card-top-content">
+          <div class="card-header">
+            <div class="code-badge-row">
+              <span class="course-code">CDT_1101</span>
+              <span class="question-pill">120 Questions</span>
+            </div>
+            <h2 class="course-title">Data Analysis</h2>
+          </div>
+          <p class="course-description">
+            Foundational data analytics concepts, Gartner definitions, 6 enterprise case studies, 4 analytics types, the CRISP-DM mining process, and clustering models.
+          </p>
+          <div class="topic-list">
+            <span class="topic-chip">1. Introduction (30Q)</span>
+            <span class="topic-chip">2. Data Mining (30Q)</span>
+            <span class="topic-chip">3. Clustering (30Q)</span>
+            <span class="topic-chip">4. Nature & Sources of Data (30Q)</span>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="cdt1101.html" class="btn-start" title="Launch CDT_1101 Practice Test">
+            <span>Start Practice Test</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. CCS_3101 -->
+      <article class="subject-card">
+        <div class="card-top-content">
+          <div class="card-header">
+            <div class="code-badge-row">
+              <span class="course-code">CCS_3101</span>
+              <span class="question-pill">90 Questions</span>
+            </div>
+            <h2 class="course-title">Algorithm and Complexity</h2>
+          </div>
+          <p class="course-description">
+            Algorithm representations, 6 core characteristics, design techniques (Brute-force, Divide-and-conquer, Branch & Bound), space/time analysis, and mathematical proofs.
+          </p>
+          <div class="topic-list">
+            <span class="topic-chip">1. Algorithm Basics (30Q)</span>
+            <span class="topic-chip">2. Algorithm Analysis (30Q)</span>
+            <span class="topic-chip">3. Mathematical Background (30Q)</span>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="ccs3101.html" class="btn-start" title="Launch CCS_3101 Practice Test">
+            <span>Start Practice Test</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 3. CMS_1101 -->
+      <article class="subject-card">
+        <div class="card-top-content">
+          <div class="card-header">
+            <div class="code-badge-row">
+              <span class="course-code">CMS_1101</span>
+              <span class="question-pill">130 Questions</span>
+            </div>
+            <h2 class="course-title">Multimedia Systems</h2>
+          </div>
+          <p class="course-description">
+            Multimedia foundations, 12-color wheel harmonies, color psychology, and rigorous Adobe Photoshop lab controls, layer operations, and selection masking rules.
+          </p>
+          <div class="topic-list">
+            <span class="topic-chip">1. Intro to Multimedia (20Q)</span>
+            <span class="topic-chip">2. Color Theory & Psychology (20Q)</span>
+            <span class="topic-chip">3. Photoshop Navigation & Lab (50Q)</span>
+            <span class="topic-chip">4. Layers & Cheat Sheet (20Q)</span>
+            <span class="topic-chip">5. Selections & Masking (20Q)</span>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="cms1101.html" class="btn-start" title="Launch CMS_1101 Practice Test">
+            <span>Start Practice Test</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </main>
+  </div>
+
+</body>
+</html>
